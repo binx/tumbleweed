@@ -1,1 +1,44 @@
-{}
+{
+  "store_name": "Marfa Tumbleweed",
+  "api_key": "pk_test_51NeKd0DT9gsk5cGAYtEXjd5EVgyl4FQ58LZnuo1s2gX2HMxXdgXTKaXvIXPHlGoVVbRHiEIg9nJrTy7MEXHc7f25002a0aXhwr",
+  "store_slug": "bc99gqk7h",
+  "colors": {
+    "primary": { "main": "#333333", "dark": "#222222", "contrastText": "#FFF" },
+    "secondary": { "main": "#DEBA84", "contrastText": "#000" }
+  },
+  "collections": [
+    {
+      "name": "Featured Products",
+      "url": "featured-products",
+      "id": "o5uw",
+      "products": ["prod_ORDWX74Kqm9hfa", "prod_ORD7xuCzJgj1M8"]
+    },
+    {
+      "name": "Tumbleweed Swag",
+      "id": "2msf",
+      "products": [],
+      "url": "tumbleweed-swag"
+    }
+  ],
+  "products": [
+    {
+      "name": "Tumbleweed #2",
+      "is_live": true,
+      "url": "tumbleweed-2",
+      "description": "hand-picked from the Marfa roads",
+      "stripe_id": "prod_ORDWX74Kqm9hfa",
+      "created": 1691859263,
+      "photos": [{ "name": "IMG_6802.JPG", "width": 754, "height": 1000 }]
+    },
+    {
+      "name": "Tumbleweed #1",
+      "is_live": true,
+      "url": "tumbleweed-1",
+      "description": "wildharvested from the fences of Marfa",
+      "stripe_id": "prod_ORD7xuCzJgj1M8",
+      "created": 1691857773,
+      "photos": [{ "name": "IMG_6801.JPG", "width": 750, "height": 1000 }],
+      "price": "$200.00"
+    }
+  ]
+}

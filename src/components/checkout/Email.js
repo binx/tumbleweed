@@ -1,6 +1,6 @@
-import React from 'react';
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
+import React from "react";
+import TextField from "@material-ui/core/TextField";
+import Button from "../ui/Button";
 
 const Email = ({ email, changePane, handleChange }) => {
   return (
@@ -13,15 +13,12 @@ const Email = ({ email, changePane, handleChange }) => {
         margin="normal"
         fullWidth
       />
-      <p style={{ fontSize: "12px"}}>You will receive a receipt at this email address. We will never share your email with a 3rd party.</p>
-      <Button variant="contained" color="primary"
-        style={{ marginTop: "20px" }}
-        disabled={!email.length}
-        onClick={changePane}
-      >
-        Continue
-      </Button>
+      <p style={{ fontSize: "12px", marginBottom: "20px" }}>
+        You will receive a receipt at this email address. We will never share
+        your email with a 3rd party.
+      </p>
+      <Button disabled={!email.length} onClick={changePane} label="Continue" />
     </div>
   );
-}
+};
 export default Email;

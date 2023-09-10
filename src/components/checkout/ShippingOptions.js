@@ -1,9 +1,10 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
 
-import { RadioGroup, Radio, FormControlLabel, Button } from '@material-ui/core';
+import { RadioGroup, Radio, FormControlLabel } from "@material-ui/core";
+import Button from "../ui/Button";
 
-const Label = styled.label `
+const Label = styled.label`
   display: inline-block;
   min-width: 120px;
   margin-right: 20px;
@@ -13,25 +14,31 @@ const Label = styled.label `
 function ShippingOptions(props) {
   const { options, shippingOption } = props;
 
-  const selectOption = e => {
-    const newOption = options.find(o => o.name === e.target.value);
-    props.setShippingOption(newOption)
-  }
+  const selectOption = (e) => {
+    const newOption = options.find((o) => o.name === e.target.value);
+    props.setShippingOption(newOption);
+  };
 
-  const getLabel = o => (
+  const getLabel = (o) => (
     <div>
       <Label>{o.name}</Label>
-      <span>{(o.price/100).toLocaleString('en-US', { style: 'currency', currency: 'USD' })}</span>
+      <span>
+        {(o.price / 100).toLocaleString("en-US", {
+          style: "currency",
+          currency: "USD",
+        })}
+      </span>
     </div>
-  )
+  );
 
   return (
-    <div style={{ marginTop: "20px"}}>
+    <div style={{ marginTop: "20px" }}>
       <RadioGroup
         value={shippingOption ? shippingOption.name : ""}
         onChange={selectOption}
+        style={{ marginBottom: "40px" }}
       >
-        { options.map((o,i) => (
+        {options.map((o, i) => (
           <FormControlLabel
             key={`radio${i}`}
             value={o.name}
@@ -41,13 +48,10 @@ function ShippingOptions(props) {
         ))}
       </RadioGroup>
       <Button
-        variant="contained" color="primary"
-        style={{ marginTop: "40px" }}
         disabled={!shippingOption}
         onClick={props.createOrder}
-      >
-        Continue
-      </Button>
+        label="Continue"
+      />
     </div>
   );
 }

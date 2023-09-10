@@ -1,10 +1,13 @@
-import React from 'react';
-import styled from 'styled-components';
-import Divider from '@material-ui/core/Divider';
+import React from "react";
+import styled from "styled-components";
+import Divider from "@material-ui/core/Divider";
 
-const Wrapper = styled.div `
+const Wrapper = styled.div`
+  border: 1px solid black;
+  padding: 24px;
+  margin-bottom: 24px;
 `;
-const Row = styled.div `
+const Row = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 5px 0;
@@ -19,11 +22,15 @@ const Row = styled.div `
     flex-direction: column;
     justify-content: center;
   }
-  .black-text { color: #000; }
-  .small-text { font-size: 14px; }
+  .black-text {
+    color: #000;
+  }
+  .small-text {
+    font-size: 14px;
+  }
 `;
-const Image = styled.div `
-  background-image: url(${props => props.img});
+const Image = styled.div`
+  background-image: url(${(props) => props.img});
   background-color: #eee;
   width: 62px;
   height: 62px;
@@ -34,17 +41,20 @@ const Image = styled.div `
 const CartSmall = ({ items, shippingOption }) => {
   let subtotal = 0;
   if (items.length) {
-    subtotal = items.map(i => i.quantity * i.price)
-      .reduce((a, b) => a + Number(b))
+    subtotal = items
+      .map((i) => i.quantity * i.price)
+      .reduce((a, b) => a + Number(b));
   }
-  const total = shippingOption ? (subtotal + shippingOption.price / 100) : subtotal;
+  const total = shippingOption
+    ? subtotal + shippingOption.price / 100
+    : subtotal;
 
   return (
     <Wrapper>
-      {items.map((d,i) => {
+      {items.map((d, i) => {
         let attrs = [];
         for (let key in d.attr) {
-          attrs.push(`${key.replace("_", " ")}: ${d.attr[key]}`)
+          attrs.push(`${key.replace("_", " ")}: ${d.attr[key]}`);
         }
         attrs = attrs.join(", ");
 
@@ -63,29 +73,40 @@ const CartSmall = ({ items, shippingOption }) => {
           </Row>
         );
       })}
-      <Divider style={{ margin: "20px 0" }}/>
-        <Row>
-          <span className="small-text">Subtotal</span>
+      <Divider style={{ margin: "20px 0" }} />
+      <Row>
+        <span className="small-text">Subtotal</span>
+        <span className="black-text small-text">
+          {subtotal.toLocaleString("en-US", {
+            style: "currency",
+            currency: "USD",
+          })}
+        </span>
+      </Row>
+      <Row>
+        <span className="small-text">Shipping</span>
+        {shippingOption && (
           <span className="black-text small-text">
-            {subtotal.toLocaleString('en-US', { style: 'currency', currency: 'USD' })}
+            {shippingOption.price === 0
+              ? "FREE"
+              : (shippingOption.price / 100).toLocaleString("en-US", {
+                  style: "currency",
+                  currency: "USD",
+                })}
           </span>
-        </Row>
-        <Row>
-          <span className="small-text">Shipping</span>
-          { shippingOption && (
-            <span className="black-text small-text">
-              {shippingOption.price === 0 ? "FREE" : (shippingOption.price/100).toLocaleString('en-US', { style: 'currency', currency: 'USD' })}
-            </span>
-          )}
-        </Row>
-      <Divider style={{ margin: "20px 0" }}/>
-        <Row>
-          <span>Total</span>
-          <span className="black-text">
-            {total.toLocaleString('en-US', { style: 'currency', currency: 'USD' })}
-          </span>
-        </Row>
+        )}
+      </Row>
+      <Divider style={{ margin: "20px 0" }} />
+      <Row>
+        <span>Total</span>
+        <span className="black-text">
+          {total.toLocaleString("en-US", {
+            style: "currency",
+            currency: "USD",
+          })}
+        </span>
+      </Row>
     </Wrapper>
   );
-}
+};
 export default CartSmall;
