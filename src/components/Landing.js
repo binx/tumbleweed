@@ -121,6 +121,8 @@ const Landing = ({ config }) => {
           <ProductList products={giftShop} />
         </GalleryWrapper>
       </PageWrapper>
+
+      <LandingLinks />
     </>
   );
 };

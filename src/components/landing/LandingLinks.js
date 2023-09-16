@@ -44,6 +44,7 @@ const LandingLinks = () => {
       <Links>
         <Flex>
           <Link to={"/collection/exhibition"}>Exhibition</Link>
+          <Link to={"/collection/authentic-weeds"}>Authentic Weeds</Link>
           <Link to={"/collection/gift-shop"}>Gift Shop</Link>
           <Link to={"/about"}>About</Link>
         </Flex>

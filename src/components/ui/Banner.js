@@ -40,6 +40,7 @@ function Banner({ quantity, config, width, location }) {
 
   let links = [
     { url: "/collection/exhibition", label: "Exhibition" },
+    { url: "/collection/authentic-weeds", label: "Authentic Weeds" },
     { url: "/collection/gift-shop", label: "Gift Shop" },
   ];
   if (config.about_page) links.push({ url: "/about", label: "About" });
