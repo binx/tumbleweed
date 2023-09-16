@@ -38,7 +38,10 @@ function Banner({ quantity, config, width, location }) {
 
   const number = quantity ? ` (${quantity})` : "";
 
-  let links = [{ url: "/shop", label: "Shop" }];
+  let links = [
+    { url: "/collection/exhibition", label: "Exhibition" },
+    { url: "/collection/gift-shop", label: "Gift Shop" },
+  ];
   if (config.about_page) links.push({ url: "/about", label: "About" });
 
   if (isAdmin) {

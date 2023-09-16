@@ -1,25 +1,39 @@
 import React from "react";
-import styled from "styled-components";
 import { getProductsFromCollection } from "../util";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
+import HeroIntro from "./landing/HeroIntro";
+import BigQuote from "./landing/BigQuote";
+import Gallery from "./landing/Gallery";
 import PageWrapper from "./ui/PageWrapper";
-import Paper from "@material-ui/core/Paper";
 import ProductList from "./product/ProductList";
+// import Soil from "./landing/Soil";
+import LandingLinks from "./landing/LandingLinks";
 
-import headerImg from "./landing/tumble-header.jpeg";
+const StyledLink = styled.h3`
+  font-weight: 100;
+  margin: 0 0 32px 0;
 
-const Hero = styled.div`
-  height: 400px;
-  background-image: url(${headerImg});
-  background-size: cover;
-  background-position: 50%;
-  color: white;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0px 0 20px;
-  font-family: Inter;
+  a {
+    color: black;
+    text-decoration: none;
+    &:hover {
+      text-decoration: dashed underline;
+    }
+  }
+`;
+const GalleryWrapper = styled.div`
+  border: 1px solid black;
+  padding: 40px;
+  margin-bottom: 80px;
+
+  @media (max-width: 1100px) {
+    margin: 0 20px 80px;
+  }
+  @media (max-width: 600px) {
+    padding: 20px;
+  }
 `;
 
 const Landing = ({ config }) => {
@@ -28,43 +42,35 @@ const Landing = ({ config }) => {
     "featured-products"
   );
 
+  const giftShop = getProductsFromCollection(config, "gift-shop").slice(0, 3);
+
   return (
     <>
-      <Hero>
-        <div style={{ display: "inline-block", maxWidth: "80%" }}>
-          <p
-            style={{
-              fontSize: "64px",
-              fontWeight: 300,
-              textTransform: "uppercase",
-              letterSpacing: "2px",
-              textShadow: "0 0 6px #DEBA84",
-            }}
-          >
-            marfa tumbleweed
-          </p>
-        </div>
-      </Hero>
+      <HeroIntro />
+      <LandingLinks />
+      <BigQuote />
+      <Gallery />
+
       <PageWrapper>
-        <Paper style={{ padding: "40px" }}>
-          {/* <Divider style={{ margin: "40px 0" }} /> */}
+        <GalleryWrapper>
+          <StyledLink>
+            <Link to={"/collection/exhibition"}>
+              view all artworks <span style={{ fontSize: "24px" }}>↣</span>
+            </Link>
+          </StyledLink>
           <ProductList products={featuredProducts} />
-        </Paper>
+        </GalleryWrapper>
+        {/* <Soil /> */}
+
+        <GalleryWrapper>
+          <StyledLink>
+            <Link to={"/collection/exhibition"}>
+              view the giftshop <span style={{ fontSize: "24px" }}>↣</span>
+            </Link>
+          </StyledLink>
+          <ProductList products={giftShop} />
+        </GalleryWrapper>
       </PageWrapper>
-      <p style={{ textAlign: "center", fontSize: "12px", color: "#888" }}>
-        this is a site by{" "}
-        <a style={{ color: "#888" }} href="https://rachelbinx.com">
-          rachel binx
-        </a>
-      </p>
-      <p style={{ textAlign: "center", fontSize: "12px" }}>
-        <a
-          style={{ color: "#888" }}
-          href="https://www.motherjones.com/environment/2016/12/tumbleweeds-attack-stroomer/"
-        >
-          header image source
-        </a>
-      </p>
     </>
   );
 };
