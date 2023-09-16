@@ -40,9 +40,11 @@ const ImgWrapper = styled.div`
   display: flex;
 `;
 const Title = styled.div`
+  letter-spacing: 0.5px;
   color: black;
   margin-top: 10px;
   text-transform: uppercase;
+  font-weight: 300;
   @media (max-width: 650px) {
     font-size: 14px;
   }

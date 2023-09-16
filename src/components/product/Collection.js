@@ -11,7 +11,6 @@ const Wrapper = styled.div`
 
   h2 {
     text-transform: uppercase;
-    font-weight: 100;
     margin: 0 0 40px;
   }
 

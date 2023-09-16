@@ -6,6 +6,11 @@ import Button from "../ui/Button";
 import TextField from "@material-ui/core/TextField";
 import Select from "@material-ui/core/Select";
 
+const Title = styled.h2`
+  margin-top: 28px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+`;
 const FlexWrapper = styled.div`
   margin: 20px 0 40px;
 `;
@@ -28,9 +33,10 @@ const Right = styled.div`
   align-items: baseline;
 `;
 const Description = styled.div`
-  color: rgba(0, 0, 0, 0.87);
+  color: #555;
   font-size: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 80px;
+  line-height: 1.4;
 `;
 const Details = styled.div`
   clear: both;
@@ -77,15 +83,24 @@ const ProductDetails = (props) => {
       inventoryStatus = (
         <div
           style={{ marginBottom: "10px" }}
-        >{`Hurry! Only ${inventory.quantity} Available`}</div>
+        >{`${inventory.quantity} Available`}</div>
       );
     }
   }
 
   return (
     <div>
-      <h2 style={{ marginTop: "28px" }}>{product.name}</h2>
+      <Title>{product.name}</Title>
       <Description>{product.description}</Description>
+      {product.bulletPoints && (
+        <Details>
+          <ul>
+            {product.bulletPoints.map((detail, i) => (
+              <li key={i}>{detail}</li>
+            ))}
+          </ul>
+        </Details>
+      )}
       {!!variants.length && variants.length > 1 && (
         <FlexWrapper>
           {variants.map((v, i) => (
@@ -151,15 +166,6 @@ const ProductDetails = (props) => {
           />
         )}
       </Right>
-      {product.details && (
-        <Details>
-          <ul>
-            {product.details.map((detail, i) => (
-              <li key={i}>{detail}</li>
-            ))}
-          </ul>
-        </Details>
-      )}
     </div>
   );
 };

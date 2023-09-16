@@ -7,6 +7,9 @@ import { URLize } from "../../util";
 const Wrapper = styled.div`
   margin-bottom: 16px;
   font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
   > a {
     color: #555;
     text-decoration: none;
@@ -19,8 +22,10 @@ const Wrapper = styled.div`
   }
 `;
 const Spacer = styled.span`
-  color: ${(props) => props.color};
+  color: #000;
   margin: 0 10px;
+  font-size: 20px;
+  line-height: 12px;
 `;
 
 const Breadcrumb = ({ product, theme, collection }) => {

@@ -10,7 +10,7 @@ const createOptions = (fontSize) => {
         fontSize,
         color: "#222",
         letterSpacing: "0.025em",
-        fontFamily: "Raleway, sans-serif",
+        fontFamily: "Gotham, sans-serif",
         fontWeight: "100",
         "::placeholder": {
           color: "#aab7c4",

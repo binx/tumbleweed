@@ -11,13 +11,16 @@ import ProductList from "./product/ProductList";
 // import Soil from "./landing/Soil";
 import LandingLinks from "./landing/LandingLinks";
 
+import landscapeIMG from "./landing/landscape.jpg";
+
 const StyledLink = styled.h3`
-  font-weight: 100;
   margin: 0 0 32px 0;
 
   a {
     color: black;
     text-decoration: none;
+    font-weight: 300;
+    text-transform: uppercase;
     &:hover {
       text-decoration: dashed underline;
     }
@@ -33,6 +36,47 @@ const GalleryWrapper = styled.div`
   }
   @media (max-width: 600px) {
     padding: 20px;
+  }
+`;
+const LandscapeImg = styled.div`
+  background-image: url(${landscapeIMG});
+  width: 100%;
+  height: 550px;
+  background-size: cover;
+  background-position: 50% 80%;
+  margin-bottom: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 800px) {
+    height: 400px;
+  }
+  @media (max-width: 550px) {
+    height: 300px;
+  }
+`;
+const Marfa = styled.div`
+  color: white;
+  font-size: 110px;
+  text-transform: uppercase;
+  border: 6px solid white;
+  border-radius: 120px;
+  padding: 10px 60px;
+  font-family: Gotham;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+
+  @media (max-width: 800px) {
+    font-size: 70px;
+    padding: 0px 40px;
+    margin-bottom: 10px;
+  }
+  @media (max-width: 400px) {
+    font-size: 40px;
+    padding: 0px 25px;
+    margin-bottom: 10px;
+    border: 3px solid white;
   }
 `;
 
@@ -55,17 +99,23 @@ const Landing = ({ config }) => {
         <GalleryWrapper>
           <StyledLink>
             <Link to={"/collection/exhibition"}>
-              view all artworks <span style={{ fontSize: "24px" }}>↣</span>
+              view the exhibition <span style={{ fontSize: "24px" }}>↣</span>
             </Link>
           </StyledLink>
           <ProductList products={featuredProducts} />
         </GalleryWrapper>
-        {/* <Soil /> */}
+      </PageWrapper>
+      {/* <Soil /> */}
 
+      <LandscapeImg>
+        <Marfa>Marfa</Marfa>
+      </LandscapeImg>
+
+      <PageWrapper>
         <GalleryWrapper>
           <StyledLink>
             <Link to={"/collection/exhibition"}>
-              view the giftshop <span style={{ fontSize: "24px" }}>↣</span>
+              view the gift shop <span style={{ fontSize: "24px" }}>↣</span>
             </Link>
           </StyledLink>
           <ProductList products={giftShop} />

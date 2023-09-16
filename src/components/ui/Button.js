@@ -8,6 +8,7 @@ const Wrapper = styled.button`
   text-transform: uppercase;
   padding: 12px 24px;
   cursor: pointer;
+  letter-spacing: 0.5px;
 
   &:hover {
     background: black;

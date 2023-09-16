@@ -6,7 +6,6 @@ import galleryIMG from "./storefront.jpg";
 const Grid = styled.div`
   display: flex;
   margin-bottom: 80px;
-  font-family: Raleway, sans-serif;
 
   > div {
     width: 50%;
@@ -42,7 +41,6 @@ const Text = styled.div`
   align-items: center;
   justify-content: center;
   font-size: 14px;
-  font-weight: 100;
   text-transform: uppercase;
   line-height: 2;
   letter-spacing: 1px;

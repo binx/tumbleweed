@@ -8,6 +8,11 @@ body {
   font-family: 'Yavome';
   src: local('Yavome'), url(./assets/YavomeRegular.ttf) format('truetype');
 }
+@font-face {
+  font-family: 'Gotham';
+  /* src: local('Gotham'), url(./assets/GothamLight.otf) format('opentype'); */
+  src: local('Gotham'), url(./assets/JostVariableFont_wght.ttf) format('truetype');
+}
 
 * {
   box-sizing: border-box;
@@ -15,10 +20,10 @@ body {
 
 body, html {
   font-size: 18px;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Gotham', sans-serif;
 }
 
-h1 { font-family: 'Raleway', sans-serif; }
+h1 { font-family: 'Gotham', sans-serif; }
 h2 { color: #000 !important; }
 
 h2 {
