@@ -1,11 +1,20 @@
-import React from 'react';
-import styled from 'styled-components';
-import ProductList from './ProductList';
-import PageWrapper from '../ui/PageWrapper';
-import Paper from '@material-ui/core/Paper';
+import React from "react";
+import styled from "styled-components";
+import ProductList from "./ProductList";
+import PageWrapper from "../ui/PageWrapper";
+import Paper from "@material-ui/core/Paper";
 
-const Wrapper = styled.div `
+const Wrapper = styled.div`
+  border: 1px solid black;
   padding: 40px;
+  margin: 40px 20px 80px;
+
+  h2 {
+    text-transform: uppercase;
+    font-weight: 100;
+    margin: 0 0 40px;
+  }
+
   @media (max-width: 650px) {
     padding: 20px;
   }
@@ -13,12 +22,10 @@ const Wrapper = styled.div `
 
 const Collection = ({ products, title }) => (
   <PageWrapper>
-    <Paper>
-      <Wrapper>
-        <h2 style={{ marginTop: 0, fontWeight: 600 }}>{title}</h2>
-        <ProductList products={products} collection={title} />
-      </Wrapper>
-    </Paper>
+    <Wrapper>
+      <h2>{title}</h2>
+      <ProductList products={products} collection={title} />
+    </Wrapper>
   </PageWrapper>
 );
 export default Collection;
