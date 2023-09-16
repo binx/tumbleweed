@@ -10,8 +10,7 @@ import PageWrapper from "./ui/PageWrapper";
 import ProductList from "./product/ProductList";
 // import Soil from "./landing/Soil";
 import LandingLinks from "./landing/LandingLinks";
-
-import landscapeIMG from "./landing/landscape.jpg";
+import { Landscape, Tumbleweeds } from "./landing/Landscape";
 
 const StyledLink = styled.h3`
   margin: 0 0 32px 0;
@@ -38,45 +37,21 @@ const GalleryWrapper = styled.div`
     padding: 20px;
   }
 `;
-const LandscapeImg = styled.div`
-  background-image: url(${landscapeIMG});
-  width: 100%;
-  height: 550px;
-  background-size: cover;
-  background-position: 50% 80%;
-  margin-bottom: 80px;
+
+const Footer = styled.div`
+  background: black;
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  @media (max-width: 800px) {
-    height: 400px;
-  }
-  @media (max-width: 550px) {
-    height: 300px;
-  }
-`;
-const Marfa = styled.div`
-  color: white;
-  font-size: 110px;
+  padding: 40px 20px;
   text-transform: uppercase;
-  border: 6px solid white;
-  border-radius: 120px;
-  padding: 10px 60px;
-  font-family: Gotham;
-  margin-bottom: 40px;
-  letter-spacing: 2px;
+  font-size: 14px;
 
-  @media (max-width: 800px) {
-    font-size: 70px;
-    padding: 0px 40px;
-    margin-bottom: 10px;
-  }
-  @media (max-width: 400px) {
-    font-size: 40px;
-    padding: 0px 25px;
-    margin-bottom: 10px;
-    border: 3px solid white;
+  a {
+    color: white;
+    display: inline-block;
+    margin-left: 5px;
   }
 `;
 
@@ -87,6 +62,10 @@ const Landing = ({ config }) => {
   );
 
   const giftShop = getProductsFromCollection(config, "gift-shop").slice(0, 3);
+  const weeds = getProductsFromCollection(config, "authentic-weeds").slice(
+    0,
+    3
+  );
 
   return (
     <>
@@ -107,9 +86,20 @@ const Landing = ({ config }) => {
       </PageWrapper>
       {/* <Soil /> */}
 
-      <LandscapeImg>
-        <Marfa>Marfa</Marfa>
-      </LandscapeImg>
+      <Landscape />
+
+      <PageWrapper>
+        <GalleryWrapper>
+          <StyledLink>
+            <Link to={"/collection/exhibition"}>
+              view the tumbleweeds <span style={{ fontSize: "24px" }}>↣</span>
+            </Link>
+          </StyledLink>
+          <ProductList products={weeds} />
+        </GalleryWrapper>
+      </PageWrapper>
+
+      <Tumbleweeds />
 
       <PageWrapper>
         <GalleryWrapper>
@@ -122,7 +112,14 @@ const Landing = ({ config }) => {
         </GalleryWrapper>
       </PageWrapper>
 
-      <LandingLinks />
+      <div style={{ margin: "-60px 0 20px" }}>
+        <LandingLinks />
+      </div>
+
+      <Footer>
+        marfa tumbleweed is a gallery by{"  "}
+        <a href="https://rachelbinx.com">rachel binx</a>
+      </Footer>
     </>
   );
 };
