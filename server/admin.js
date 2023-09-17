@@ -81,7 +81,6 @@ app.post("/list-orders", function (req, res) {
 
 app.get("/user", function (req, res) {
   let isAdmin = false;
-  console.log(app.get("env"));
   if (req.session.isAdmin || app.get("env") === "development") isAdmin = true;
   res.json({ isAdmin });
 });

@@ -1,6 +1,7 @@
 const dotenv = require("dotenv").config({ path: "config.env" });
 const express = require("express");
-const session = require("express-session");
+// const session = require("express-session");
+const session = require("cookie-session");
 const helmet = require("helmet");
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
