@@ -42,11 +42,16 @@ const Details = styled.div`
   clear: both;
   font-size: 14px;
   margin-top: 20px;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  padding: 10px;
+
   > ul {
     margin: 0;
-    padding: 0 20px 0;
+    padding: 0;
+    list-style-type: none;
     > li {
-      margin-bottom: 10px;
+      margin-bottom: 3px;
     }
   }
 `;
