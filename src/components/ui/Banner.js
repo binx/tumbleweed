@@ -39,8 +39,8 @@ function Banner({ quantity, config, width, location }) {
   const number = quantity ? ` (${quantity})` : "";
 
   let links = [
+    { url: "/collection/tumbleweeds", label: "Tumbleweeds" },
     { url: "/collection/exhibition", label: "Exhibition" },
-    { url: "/collection/authentic-weeds", label: "Authentic Weeds" },
     { url: "/collection/gift-shop", label: "Gift Shop" },
   ];
   if (config.about_page) links.push({ url: "/about", label: "About" });

@@ -62,10 +62,7 @@ const Landing = ({ config }) => {
   );
 
   const giftShop = getProductsFromCollection(config, "gift-shop").slice(0, 3);
-  const weeds = getProductsFromCollection(config, "authentic-weeds").slice(
-    0,
-    3
-  );
+  const weeds = getProductsFromCollection(config, "tumbleweeds").slice(0, 3);
 
   return (
     <>
@@ -73,6 +70,20 @@ const Landing = ({ config }) => {
       <LandingLinks />
       <BigQuote />
       <Gallery />
+      {/* <Soil /> */}
+
+      <PageWrapper>
+        <GalleryWrapper>
+          <StyledLink>
+            <Link to={"/collection/exhibition"}>
+              see the tumbleweeds <span style={{ fontSize: "24px" }}>↣</span>
+            </Link>
+          </StyledLink>
+          <ProductList products={weeds} />
+        </GalleryWrapper>
+      </PageWrapper>
+
+      <Landscape />
 
       <PageWrapper>
         <GalleryWrapper>
@@ -84,20 +95,6 @@ const Landing = ({ config }) => {
           <ProductList products={featuredProducts} />
         </GalleryWrapper>
       </PageWrapper>
-      {/* <Soil /> */}
-
-      <Landscape />
-
-      <PageWrapper>
-        <GalleryWrapper>
-          <StyledLink>
-            <Link to={"/collection/exhibition"}>
-              view the tumbleweeds <span style={{ fontSize: "24px" }}>↣</span>
-            </Link>
-          </StyledLink>
-          <ProductList products={weeds} />
-        </GalleryWrapper>
-      </PageWrapper>
 
       <Tumbleweeds />
 
@@ -105,7 +102,7 @@ const Landing = ({ config }) => {
         <GalleryWrapper>
           <StyledLink>
             <Link to={"/collection/exhibition"}>
-              view the gift shop <span style={{ fontSize: "24px" }}>↣</span>
+              peruse the gift shop <span style={{ fontSize: "24px" }}>↣</span>
             </Link>
           </StyledLink>
           <ProductList products={giftShop} />
