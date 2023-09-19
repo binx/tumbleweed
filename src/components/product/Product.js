@@ -8,6 +8,7 @@ import ProductDetails from "./ProductDetails";
 import Carousel from "../ui/Carousel";
 import MobileCarousel from "../ui/MobileCarousel";
 import Breadcrumb from "../ui/Breadcrumb";
+import Footer from "../ui/Footer";
 
 const Wrapper = styled.div`
   padding: 40px;
@@ -133,26 +134,31 @@ function Product(props) {
     collection = props.location.state.collection;
 
   return (
-    <PageWrapper>
-      <Wrapper>
-        <Breadcrumb product={product} collection={collection} />
-        <Grid numColumns={hasPhotos ? (product.photos.length > 1 ? 5 : 4) : 2}>
-          {photos}
-          <div style={{ gridColumn: "span 2" }}>
-            <ProductDetails
-              product={product}
-              quantity={quantity}
-              inventory={inventory}
-              setQuantity={setQuantity}
-              variants={variants}
-              price={price}
-              updateSkuPrice={updateSkuPrice}
-              addToCart={addToCart}
-            />
-          </div>
-        </Grid>
-      </Wrapper>
-    </PageWrapper>
+    <>
+      <PageWrapper>
+        <Wrapper>
+          <Breadcrumb product={product} collection={collection} />
+          <Grid
+            numColumns={hasPhotos ? (product.photos.length > 1 ? 5 : 4) : 2}
+          >
+            {photos}
+            <div style={{ gridColumn: "span 2" }}>
+              <ProductDetails
+                product={product}
+                quantity={quantity}
+                inventory={inventory}
+                setQuantity={setQuantity}
+                variants={variants}
+                price={price}
+                updateSkuPrice={updateSkuPrice}
+                addToCart={addToCart}
+              />
+            </div>
+          </Grid>
+        </Wrapper>
+      </PageWrapper>
+      <Footer />
+    </>
   );
 }
 export default withWidth()(withRouter(Product));

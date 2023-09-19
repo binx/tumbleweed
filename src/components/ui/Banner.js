@@ -21,6 +21,7 @@ const Wrapper = styled.div`
   a {
     text-decoration: none;
     color: black;
+    display: inline-block;
   }
   .link {
     margin-right: 32px;

@@ -11,6 +11,7 @@ import ProductList from "./product/ProductList";
 // import Soil from "./landing/Soil";
 import LandingLinks from "./landing/LandingLinks";
 import { Landscape, Tumbleweeds } from "./landing/Landscape";
+import Footer from "./ui/Footer";
 
 const StyledLink = styled.h3`
   margin: 0 0 32px 0;
@@ -38,23 +39,6 @@ const GalleryWrapper = styled.div`
   }
 `;
 
-const Footer = styled.div`
-  background: black;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 40px 20px;
-  text-transform: uppercase;
-  font-size: 14px;
-
-  a {
-    color: white;
-    display: inline-block;
-    margin-left: 5px;
-  }
-`;
-
 const Landing = ({ config }) => {
   const featuredProducts = getProductsFromCollection(
     config,
@@ -75,7 +59,7 @@ const Landing = ({ config }) => {
       <PageWrapper>
         <GalleryWrapper>
           <StyledLink>
-            <Link to={"/collection/exhibition"}>
+            <Link to={"/collection/tumbleweeds"}>
               see the tumbleweeds <span style={{ fontSize: "24px" }}>↣</span>
             </Link>
           </StyledLink>
@@ -101,7 +85,7 @@ const Landing = ({ config }) => {
       <PageWrapper>
         <GalleryWrapper>
           <StyledLink>
-            <Link to={"/collection/exhibition"}>
+            <Link to={"/collection/gift-shop"}>
               peruse the gift shop <span style={{ fontSize: "24px" }}>↣</span>
             </Link>
           </StyledLink>
@@ -113,10 +97,7 @@ const Landing = ({ config }) => {
         <LandingLinks />
       </div>
 
-      <Footer>
-        marfa tumbleweed is a gallery by{"  "}
-        <a href="https://rachelbinx.com">rachel binx</a>
-      </Footer>
+      <Footer />
     </>
   );
 };
