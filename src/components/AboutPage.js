@@ -67,7 +67,7 @@ function AboutPage(props) {
         </p>
         <p style={{ marginTop: "20px" }}>
           For press inquiries or general questions, please contact us at{" "}
-          <b>gallery@marfatumbleweed.com</b>
+          <b>marfatumbleweed@gmail.com</b>
         </p>
         <Grid>
           <div>

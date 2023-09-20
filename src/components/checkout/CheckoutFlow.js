@@ -34,31 +34,6 @@ function CheckoutFlow(props) {
       });
   };
 
-  // const setToken = (token) => {
-  //   if (!orderID) {
-  //     setError(true);
-  //     return;
-  //   }
-  //   fetch("/order/pay", {
-  //     method: "POST",
-  //     headers: new Headers({ "content-type": "application/json" }),
-  //     body: JSON.stringify({
-  //       id: orderID,
-  //       source: token,
-  //     }),
-  //   })
-  //     .then((response) => response.json())
-  //     .then((order) => {
-  //       props.updateNumber(0);
-  //       localStorage.setItem(slug, JSON.stringify([]));
-
-  //       props.history.push({
-  //         pathname: "/confirm",
-  //         state: { order },
-  //       });
-  //     });
-  // };
-
   return (
     <Grid item md={8} xs={12}>
       <Wrapper>
@@ -81,7 +56,7 @@ function CheckoutFlow(props) {
       </Wrapper>
       <Wrapper>
         <CheckoutHeader
-          text={"Shipping Address"}
+          text={"Shipping & Payment"}
           classes={classes.heading}
           pane={1}
           currentPane={pane}

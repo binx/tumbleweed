@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { withRouter } from "react-router-dom";
 
 import PageWrapper from "../ui/PageWrapper";
-import Paper from "@material-ui/core/Paper";
+import cloudImg from "../landing/landscape.jpg";
 
 const Confirm = (props) => {
   useEffect(() => {
@@ -25,6 +25,10 @@ const Confirm = (props) => {
         <h2 style={{ marginTop: 0, fontWeight: 600 }}>
           Thank you for your purchase!
         </h2>
+        <p>You will receive a receipt via email.</p>
+        <div style={{ maxWidth: "600px", marginTop: "40px" }}>
+          <img src={cloudImg} style={{ width: "100%" }} />
+        </div>
       </div>
     </PageWrapper>
   );

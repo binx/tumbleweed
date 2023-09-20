@@ -16,10 +16,13 @@ function ShippingForm() {
 
   const [orderShipping, setOrderShipping] = useState();
   const [errorMessage, setErrorMessage] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     if (elements == null) return;
+
+    setLoading(true);
 
     // Trigger form validation and wallet collection
     const { error: submitError } = await elements.submit();
@@ -52,7 +55,7 @@ function ShippingForm() {
       <div style={{ margin: "40px 0" }}>
         <PaymentElement />
       </div>
-      <Button disabled={!stripe || !elements} label="Continue" />
+      <Button disabled={!stripe || !elements || loading} label="Submit" />
       {errorMessage && <div>{errorMessage}</div>}
     </form>
   );
