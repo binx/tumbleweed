@@ -41,6 +41,16 @@ const Grid = styled.div`
     font-weight: 200;
     font-size: 16px;
     letter-spacing: 1px;
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    li a {
+      color: black;
+      text-decoration: none;
+      border-bottom: 1px dotted;
+    }
   }
   @media (max-width: 600px) {
     grid-template-columns: 1fr;
@@ -63,11 +73,19 @@ function AboutPage(props) {
           <div>
             <h3>Gallery Artists</h3>
             <ul>
-              <li>Rachel Binx</li>
-              <li>cypress masso</li>
+              <li>
+                <a href="https://rachelbinx.com/">rachel binx</a>
+              </li>
+              <li>
+                <a href="https://outofambit.com/">cypress masso</a>
+              </li>
               <li>Aaron Shoemaker</li>
-              <li>Mike Estee</li>
-              <li>Amber Pietrzyk</li>
+              <li>
+                <a href="http://mikeestee.com/">Mike Estee</a>
+              </li>
+              <li>
+                <a href="https://amberpietrzyk.com/">Amber Pietrzyk</a>
+              </li>
             </ul>
           </div>
           <div>
