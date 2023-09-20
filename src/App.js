@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { StripeProvider } from "react-stripe-elements";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import { getProductsFromCollection } from "./util";
@@ -73,104 +72,93 @@ function App(props) {
   });
 
   return (
-    <StripeProvider apiKey={config.api_key}>
-      <Router>
-        <ScrollToTop>
-          <MuiThemeProvider theme={theme}>
-            <Banner quantity={quantity} config={config} />
-            <Switch>
-              <Route
-                exact
-                path="/"
-                render={() => <Landing config={config} />}
-              />
-              {config.about_page && (
-                <Route exact path="/about" component={AboutPage} />
+    <Router>
+      <ScrollToTop>
+        <MuiThemeProvider theme={theme}>
+          <Banner quantity={quantity} config={config} />
+          <Switch>
+            <Route exact path="/" render={() => <Landing config={config} />} />
+            {config.about_page && (
+              <Route exact path="/about" component={AboutPage} />
+            )}
+            <Route
+              exact
+              path="/shop"
+              render={() => <CollectionList config={config} />}
+            />
+            <Route
+              exact
+              path="/collection/all-products"
+              render={() => (
+                <Collection products={config.products} title={"All Products"} />
               )}
+            />
+            {config.collections.map((collection, i) => (
               <Route
                 exact
-                path="/shop"
-                render={() => <CollectionList config={config} />}
+                key={`route${i}`}
+                path={`/collection/${collection.url}`}
+                render={() => {
+                  const products = getProductsFromCollection(
+                    config,
+                    collection.url
+                  );
+                  return (
+                    <Collection products={products} title={collection.name} />
+                  );
+                }}
               />
+            ))}
+            {config.products.map((product, i) => (
               <Route
                 exact
-                path="/collection/all-products"
+                key={`route${i}`}
+                path={`/product/${product.url}`}
                 render={() => (
-                  <Collection
-                    products={config.products}
-                    title={"All Products"}
+                  <Product
+                    product={product}
+                    config={config}
+                    updateNumber={setQuantity}
                   />
                 )}
               />
-              {config.collections.map((collection, i) => (
-                <Route
-                  exact
-                  key={`route${i}`}
-                  path={`/collection/${collection.url}`}
-                  render={() => {
-                    const products = getProductsFromCollection(
-                      config,
-                      collection.url
-                    );
-                    return (
-                      <Collection products={products} title={collection.name} />
-                    );
-                  }}
-                />
-              ))}
-              {config.products.map((product, i) => (
-                <Route
-                  exact
-                  key={`route${i}`}
-                  path={`/product/${product.url}`}
-                  render={() => (
-                    <Product
-                      product={product}
-                      config={config}
-                      updateNumber={setQuantity}
-                    />
-                  )}
-                />
-              ))}
-              <Route
-                exact
-                path="/cart"
-                render={() => (
-                  <Cart config={config} updateNumber={setQuantity} />
-                )}
-              />
-              <Route
-                exact
-                path="/checkout"
-                render={() => (
-                  <Checkout config={config} updateNumber={setQuantity} />
-                )}
-              />
-              <Route
-                exact
-                path="/confirm"
-                render={() => (
-                  <Confirm config={config} updateNumber={setQuantity} />
-                )}
-              />
-              <Route exact path="/login" component={Login} />
-
-              {isAdmin && (
-                <Route
-                  path="/config/"
-                  render={(props) => (
-                    <Config config={config} match={props.match} />
-                  )}
-                />
+            ))}
+            <Route
+              exact
+              path="/cart"
+              render={() => <Cart config={config} updateNumber={setQuantity} />}
+            />
+            <Route
+              exact
+              path="/checkout"
+              render={() => (
+                <Checkout config={config} updateNumber={setQuantity} />
               )}
-              {isAdmin && <Route exact path="/orders" component={Orders} />}
+            />
+            <Route
+              exact
+              path="/confirm"
+              render={() => (
+                <Confirm config={config} updateNumber={setQuantity} />
+              )}
+            />
+            <Route exact path="/login" component={Login} />
 
-              <Route component={NotFound404} />
-            </Switch>
-          </MuiThemeProvider>
-        </ScrollToTop>
-      </Router>
-    </StripeProvider>
+            {isAdmin && (
+              <Route
+                path="/config/"
+                render={(props) => (
+                  <Config config={config} match={props.match} />
+                )}
+              />
+            )}
+            {isAdmin && <Route exact path="/orders" component={Orders} />}
+
+            <Route component={NotFound404} />
+          </Switch>
+        </MuiThemeProvider>
+      </ScrollToTop>
+    </Router>
   );
 }
 export default App;
