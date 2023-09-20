@@ -16,6 +16,9 @@ const Wrapper = styled.div`
     line-height: 1.5;
     margin: 0;
   }
+  @media (max-width: 600px) {
+    padding: 20px;
+  }
 `;
 const Grid = styled.div`
   display: grid;
@@ -47,7 +50,7 @@ function AboutPage(props) {
       <Wrapper>
         <h2>About</h2>
         <p>
-          Marfa Tumbleweed is a pop-up tumbleweed gallery, located in Marfa TX.
+          Marfa Tumbleweed is a pop-up tumbleweed gallery, located in Marfa, TX.
         </p>
         <Grid>
           <div>

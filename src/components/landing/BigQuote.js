@@ -32,7 +32,7 @@ const Blend = styled.div`
   top: 0;
   z-index: 1;
   color: white;
-  background: rgba(0, 60, 120, 0.8);
+  background: rgba(0, 60, 120, 0.9);
   mix-blend-mode: multiply;
   height: 100%;
   display: flex;
@@ -48,11 +48,18 @@ const Blend = styled.div`
   @media (max-width: 1100px) {
     font-size: 60px;
   }
-  @media (max-width: 550px) {
-    font-size: 40px;
+  @media (max-width: 750px) {
+    font-size: 50px;
   }
-  @media (max-width: 370px) {
+  @media (max-width: 600px) {
+    font-size: 40px;
+    padding: 0px 20px;
+  }
+  @media (max-width: 450px) {
     font-size: 34px;
+  }
+  @media (max-width: 350px) {
+    font-size: 30px;
   }
 `;
 
@@ -61,9 +68,10 @@ const BigQuote = () => {
     <QuoteWrapper>
       <BG></BG>
       <Blend>
-        An art exposition that delves into the profound symbiosis between the
-        elemental forces of Earth and Wind as embodied by the elusive
-        tumbleweeds of Marfa,&nbsp;Texas.
+        An art exhibition that explores the tension between the endemic
+        environment and our commodified idea of the desert. We examine the
+        intricate forms and complex history of the iconic tumbleweeds of
+        Marfa,&nbsp;Texas.
       </Blend>
     </QuoteWrapper>
   );

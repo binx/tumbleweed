@@ -17,6 +17,7 @@ const Links = styled.div`
 `;
 const Flex = styled.div`
   display: flex;
+  align-items: center;
   gap: 40px;
   padding: 20px 40px;
   text-transform: uppercase;
@@ -26,15 +27,21 @@ const Flex = styled.div`
   a {
     color: black;
     text-decoration: none;
+    text-align: center;
     &:hover {
       text-decoration: dashed underline;
     }
   }
 
   @media (max-width: 500px) {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px 60px;
+  }
+  @media (max-width: 370px) {
+    justify-content: center;
     flex-direction: column;
-    text-align: center;
-    gap: 20px;
+    gap: 20px 60px;
   }
 `;
 

@@ -32,6 +32,15 @@ const Wrapper = styled.div`
       text-decoration: dashed underline;
     }
   }
+  @media (max-width: 600px) {
+    padding: 20px;
+    h3 {
+      margin: 0;
+    }
+  }
+  @media (max-width: 400px) {
+    padding: 10px 20px;
+  }
 `;
 
 function Banner({ quantity, config, width, location }) {
