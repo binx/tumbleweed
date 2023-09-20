@@ -1,104 +1,83 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
-import { TextField } from "@material-ui/core";
 import Button from "../ui/Button";
+import { loadStripe } from "@stripe/stripe-js";
+import {
+  AddressElement,
+  PaymentElement,
+  Elements,
+  useStripe,
+  useElements,
+} from "@stripe/react-stripe-js";
 
-function Shipping(props) {
-  const blankAddress = {
-    givenName: "",
-    familyName: "",
-    address1: "",
-    address2: "",
-    locality: "",
-    region: "",
-    postalCode: "",
+function ShippingForm() {
+  const stripe = useStripe();
+  const elements = useElements();
+
+  const [orderShipping, setOrderShipping] = useState();
+  const [errorMessage, setErrorMessage] = useState(null);
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    if (elements == null) return;
+
+    // Trigger form validation and wallet collection
+    const { error: submitError } = await elements.submit();
+    if (submitError) {
+      // Show error to your customer
+      setErrorMessage(submitError.message);
+      return;
+    }
+
+    const { error } = await stripe.confirmPayment({
+      elements,
+      confirmParams: {
+        // Make sure to change this to your payment completion page
+        return_url:
+          "https://marfatumbleweed.com/confirm?session_id={CHECKOUT_SESSION_ID}",
+      },
+    });
   };
-  const [address, setAddress] = useState(blankAddress);
 
-  useEffect(() => {
-    if (Object.keys(props.address).length) setAddress(props.address);
-  }, [props.address]);
-
-  const handleChange = (name, value) => {
-    const newAddress = Object.assign(
-      { ...address },
-      {
-        [name]: value,
-      }
-    );
-    setAddress(newAddress);
-  };
-
-  const submitAddress = () => {
-    props.setAddress(address);
-    props.changePane();
+  const getShipping = (event) => {
+    if (event.complete) {
+      // Extract potentially complete address
+      setOrderShipping(event.value);
+    }
   };
 
   return (
-    <div>
-      <TextField
-        autoComplete="given-name"
-        label="First Name"
-        value={address.givenName}
-        onChange={(e) => handleChange("givenName", e.target.value)}
-        margin="normal"
-        style={{ marginRight: "50px" }}
-      />
-      <TextField
-        autoComplete="family-name"
-        label="Last Name"
-        value={address.familyName}
-        onChange={(e) => handleChange("familyName", e.target.value)}
-        margin="normal"
-      />
-
-      <TextField
-        autoComplete="shipping address-line1"
-        label="Street Address"
-        value={address.address1}
-        onChange={(e) => handleChange("address1", e.target.value)}
-        margin="normal"
-        fullWidth
-      />
-      <TextField
-        autoComplete="shipping address-line2"
-        label="Apt, suite, etc (optional)"
-        value={address.address2}
-        onChange={(e) => handleChange("address2", e.target.value)}
-        margin="normal"
-        fullWidth
-      />
-      <TextField
-        autoComplete="shipping locality"
-        label="City"
-        value={address.locality}
-        onChange={(e) => handleChange("locality", e.target.value)}
-        margin="normal"
-        style={{ marginRight: "50px" }}
-      />
-      <TextField
-        autoComplete="shipping region"
-        label="State"
-        value={address.region}
-        onChange={(e) => handleChange("region", e.target.value)}
-        margin="normal"
-        style={{ marginRight: "50px" }}
-      />
-      <TextField
-        autoComplete="shipping postal-code"
-        label="Zip"
-        value={address.postalCode}
-        onChange={(e) => handleChange("postalCode", e.target.value)}
-        margin="normal"
-      />
-      <div style={{ marginTop: "40px" }}>
-        <Button
-          disabled={!address.postalCode.length}
-          onClick={submitAddress}
-          label="Continue"
-        />
+    <form onSubmit={handleSubmit}>
+      <AddressElement options={{ mode: "shipping" }} onChange={getShipping} />
+      <div style={{ margin: "40px 0" }}>
+        <PaymentElement />
       </div>
-    </div>
+      <Button disabled={!stripe || !elements} label="Continue" />
+      {errorMessage && <div>{errorMessage}</div>}
+    </form>
+  );
+}
+
+function Shipping({ api_key, clientSecret }) {
+  const stripePromise = loadStripe(api_key);
+
+  const appearance = {
+    clientSecret,
+    appearance: {
+      theme: "flat",
+      variables: {
+        fontFamily: "Gotham, system-ui, sans-serif",
+        borderRadius: "0px",
+      },
+    },
+  };
+
+  return (
+    <Elements stripe={stripePromise} options={appearance}>
+      <div style={{ margin: "40px 0 0px" }}>
+        <ShippingForm />
+      </div>
+    </Elements>
   );
 }
 export default Shipping;

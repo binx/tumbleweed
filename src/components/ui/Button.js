@@ -23,9 +23,9 @@ const Wrapper = styled.button`
   }
 `;
 
-const Button = ({ onClick, disabled, label }) => {
+const Button = ({ onClick, disabled, label, type }) => {
   return (
-    <Wrapper disabled={disabled} onClick={onClick}>
+    <Wrapper type={type || "submit"} disabled={disabled} onClick={onClick}>
       {label}
     </Wrapper>
   );

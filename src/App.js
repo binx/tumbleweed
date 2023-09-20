@@ -146,7 +146,13 @@ function App(props) {
                   <Checkout config={config} updateNumber={setQuantity} />
                 )}
               />
-              <Route exact path="/confirm" component={Confirm} />
+              <Route
+                exact
+                path="/confirm"
+                render={() => (
+                  <Confirm config={config} updateNumber={setQuantity} />
+                )}
+              />
               <Route exact path="/login" component={Login} />
 
               {isAdmin && (

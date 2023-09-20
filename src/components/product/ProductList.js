@@ -57,47 +57,47 @@ const Price = styled.span`
 `;
 
 function ProductList(props) {
-  const [products, setProducts] = useState(props.products);
+  // const [products, setProducts] = useState(props.products);
 
-  useEffect(() => {
-    fetch("/product-info/")
-      .then((res) => res.json())
-      .then((skus) => {
-        let newProducts = [...products];
-        newProducts.forEach((product) => {
-          let skuList = [...skus];
-          skuList = skuList
-            .filter((s) => s.product === product.stripe_id)
-            .map((s) => s.price / 100);
-          if (skuList.length === 1) {
-            product["price"] = skuList[0].toLocaleString("en-US", {
-              style: "currency",
-              currency: "USD",
-            });
-          } else {
-            let min = Math.min(...skuList),
-              max = Math.max(...skuList);
-            if (min === max)
-              product["price"] = skuList[0].toLocaleString("en-US", {
-                style: "currency",
-                currency: "USD",
-              });
-            else
-              product["price"] = `${min.toLocaleString("en-US", {
-                style: "currency",
-                currency: "USD",
-              })} - ${max.toLocaleString("en-US", {
-                style: "currency",
-                currency: "USD",
-              })}`;
-          }
-        });
-        setProducts(newProducts);
-      })
-      .catch((error) => console.error("Error:", error));
-  }, [props.products]);
+  // useEffect(() => {
+  //   fetch("/product-info/")
+  //     .then((res) => res.json())
+  //     .then((skus) => {
+  //       let newProducts = [...products];
+  //       newProducts.forEach((product) => {
+  //         let skuList = [...skus];
+  //         skuList = skuList
+  //           .filter((s) => s.product === product.stripe_id)
+  //           .map((s) => s.price / 100);
+  //         if (skuList.length === 1) {
+  //           product["price"] = skuList[0].toLocaleString("en-US", {
+  //             style: "currency",
+  //             currency: "USD",
+  //           });
+  //         } else {
+  //           let min = Math.min(...skuList),
+  //             max = Math.max(...skuList);
+  //           if (min === max)
+  //             product["price"] = skuList[0].toLocaleString("en-US", {
+  //               style: "currency",
+  //               currency: "USD",
+  //             });
+  //           else
+  //             product["price"] = `${min.toLocaleString("en-US", {
+  //               style: "currency",
+  //               currency: "USD",
+  //             })} - ${max.toLocaleString("en-US", {
+  //               style: "currency",
+  //               currency: "USD",
+  //             })}`;
+  //         }
+  //       });
+  //       setProducts(newProducts);
+  //     })
+  //     .catch((error) => console.error("Error:", error));
+  // }, [props.products]);
 
-  const displayProducts = [...products].filter((p) => p.is_live);
+  const displayProducts = [...props.products].filter((p) => p.is_live);
 
   return (
     <Wrapper>

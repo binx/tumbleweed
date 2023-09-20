@@ -1,1 +1,199 @@
-{"store_name":"Marfa Tumbleweed","api_key":"pk_test_51NeKd0DT9gsk5cGAYtEXjd5EVgyl4FQ58LZnuo1s2gX2HMxXdgXTKaXvIXPHlGoVVbRHiEIg9nJrTy7MEXHc7f25002a0aXhwr","store_slug":"bc99gqk7h","colors":{"primary":{"main":"#333333","dark":"#222222","contrastText":"#FFF"},"secondary":{"main":"#DEBA84","contrastText":"#000"}},"collections":[{"name":"Featured Products","url":"featured-products","id":"o5uw","products":["prod_OeHWOwkQovKsEv","prod_OeHZFtFTPet2Jd","prod_OeHb2kVrGb2ESl"]},{"name":"Tumbleweeds","id":"4z8f","products":["prod_OeN6k9gWSIJxe2","prod_OeN6Z8Aexz6qQN","prod_OeN74w3RvoqDCo","prod_ORDWX74Kqm9hfa","prod_OeHQCoIqMdSAho","prod_ORD7xuCzJgj1M8"],"url":"tumbleweeds","cover":"tumble.jpg"},{"name":"Exhibition","id":"6rdy","products":["prod_OeHZFtFTPet2Jd","prod_OeHb2kVrGb2ESl","prod_OeHWOwkQovKsEv"],"url":"exhibition","cover":"IMG_7268.JPG"},{"name":"Gift Shop","id":"2msf","products":["prod_OeHxmWjQt7cUVH","prod_OeMiiRaDaTSAuK","prod_OeHzwFvhfRsGgr"],"url":"gift-shop","cover":"IMG_7287.JPG"}],"products":[{"name":"Hank","is_live":true,"url":"hank","stripe_id":"prod_OeN74w3RvoqDCo","created":1694893327,"photos":[{"name":"IMG_7307.JPG","width":1000,"height":1333}],"price":"$190.00"},{"name":"Reba","is_live":true,"url":"reba","stripe_id":"prod_OeN6k9gWSIJxe2","created":1694893265,"photos":[{"name":"IMG_7305.JPG","width":1000,"height":1333}],"price":"$240.00"},{"name":"Tanya","is_live":true,"url":"tanya","stripe_id":"prod_OeN6Z8Aexz6qQN","created":1694893229,"photos":[{"name":"IMG_7304.JPG","width":1000,"height":1333}],"price":"$270.00"},{"name":"keep honking sticker","is_live":true,"url":"keep-honking-sticker","stripe_id":"prod_OeMiiRaDaTSAuK","created":1694891829,"photos":[{"name":"ScreenShot2023-09-16at21607PM.png","width":1594,"height":1614}],"price":"$7.00"},{"name":"tumblebag","is_live":true,"url":"tumblebag","description":"art supplies, makeup brushes, cool rocks from hikes... gosh, what can't you put in this bag??","stripe_id":"prod_OeHzwFvhfRsGgr","created":1694874212,"photos":[{"name":"IMG_7299.jpg","width":1000,"height":1334},{"name":"IMG_7300.jpg","width":1000,"height":1333}],"price":"$34.00"},{"name":"velvet tumblepillow","is_live":true,"url":"velvet-tumblepillow","description":"a soft, velvet-y fabric displays a beautiful knockout tumbleweed","bulletPoints":["18\"x18\" pillow"],"stripe_id":"prod_OeHxmWjQt7cUVH","created":1694874112,"photos":[{"name":"IMG_7297.jpg","width":1000,"height":1365},{"name":"IMG_7298.jpg","width":1000,"height":1333}],"price":"$52.00"},{"name":"woodblock prints","is_live":true,"url":"woodblock-prints","description":"nature and the machine come together to create these unique prints, by Aaron Shoemaker","stripe_id":"prod_OeHb2kVrGb2ESl","created":1694872801,"photos":[{"name":"woodblock_prints.jpg","width":1500,"height":2000}],"price":"$72.00"},{"name":"Cyanotic Sojourn","is_live":true,"url":"cyanotic-sojourn","description":"The Cyanotic Sojourn is a conceptual artwork that captures the ephemeral essence of a tumbleweed rider's journey. The cyanotype print method imbues the fleeting natural tumbleweed with a sense of history, casting it in a haunting blue, reminiscent of the timeless expanse of sky it so often crossed. Bathed in sunlight during its creation, the print pays homage to the tumbleweed's sun-kissed journey through the desert.","stripe_id":"prod_OeHZFtFTPet2Jd","created":1694872671,"photos":[{"name":"evelyn_print.jpg","width":2000,"height":2667}],"price":"$80.00","bulletPoints":["cypress masso, 2023","Cyanotype Paper, Sunlight, Tumbleweed"]},{"name":"tetraweed","is_live":true,"url":"tetraweed","stripe_id":"prod_OeHWOwkQovKsEv","created":1694872477,"description":"\"TETRAWEED: In the Heart of Turbulence, A Golden Prospect\" is a provocative artwork featuring a bold, black wooden tetrahedron housing a gold-painted tumbleweed. In this piece, the humble tumbleweed casts away its desolate symbolism, instead, embodying splendor and potential. The golden tumbleweed nestled within the geometric form, underscores the transformation from survival to significance against odds. This intricate interplay between tetrahedron and tumbleweed explores existence's dualities - stability vs chaos, darkness vs light, rejection vs recognition. ","photos":[{"name":"tetraweed.jpg","width":2028,"height":2919}],"price":"$1,200.00","bulletPoints":["Mike Estee, 2023","Wood, Black Paint, Tumbleweed, Gold Paint"]},{"name":"Garth","is_live":true,"url":"garth","stripe_id":"prod_OeHQCoIqMdSAho","created":1694872136,"photos":[{"name":"IMG_7301.JPG","width":1000,"height":1333}],"price":"$320.00"},{"name":"Waylon","is_live":true,"url":"waylon","description":"hand-picked from the Marfa roads","stripe_id":"prod_ORDWX74Kqm9hfa","created":1691859263,"photos":[{"name":"IMG_7302.JPG","width":1000,"height":1333}],"price":"$∞ - -$∞"},{"name":"Shania","is_live":true,"url":"shania","description":"wildharvested from the fences of Marfa","stripe_id":"prod_ORD7xuCzJgj1M8","created":1691857773,"photos":[{"name":"IMG_7303.JPG","width":1000,"height":1436}],"price":"$∞ - -$∞"}],"about_page":true}
+{
+  "store_name": "Marfa Tumbleweed",
+  "api_key_test": "pk_test_51NeKd0DT9gsk5cGAYtEXjd5EVgyl4FQ58LZnuo1s2gX2HMxXdgXTKaXvIXPHlGoVVbRHiEIg9nJrTy7MEXHc7f25002a0aXhwr",
+  "api_key": "pk_live_51NeKd0DT9gsk5cGAZwDvqzbg2ro7bPtIgEuULijPdo0GL28HESoZD46QwyTzbOjXl8uAdNthdUNFH5Iab39dK1Q300AxlmROkv",
+  "store_slug": "bc99gqk7h",
+  "colors": {
+    "primary": { "main": "#333333", "dark": "#222222", "contrastText": "#FFF" },
+    "secondary": { "main": "#DEBA84", "contrastText": "#000" }
+  },
+  "collections": [
+    {
+      "name": "Featured Products",
+      "url": "featured-products",
+      "id": "o5uw",
+      "products": [
+        "prod_OftoofjSGu6ABm",
+        "prod_OftpC3CeZyVTco",
+        "prod_OftoEBpTJPA8hw"
+      ]
+    },
+    {
+      "name": "Tumbleweeds",
+      "id": "4z8f",
+      "products": [
+        "prod_OftnjFi70QeBfn",
+        "prod_OftnFgcoMIgiHv",
+        "prod_OftnsYNYZYBTBl",
+        "prod_OftopDT8U0sRbp",
+        "prod_OftpC3CeZyVTco",
+        "prod_OftpzwqLolwr5P"
+      ],
+      "url": "tumbleweeds",
+      "cover": "tumble.jpg"
+    },
+    {
+      "name": "Exhibition",
+      "id": "6rdy",
+      "products": [
+        "prod_OftoofjSGu6ABm",
+        "prod_OftogKN8Zq1BMz",
+        "prod_OftoCdeTclvOMU"
+      ],
+      "url": "exhibition",
+      "cover": "IMG_7268.JPG"
+    },
+    {
+      "name": "Gift Shop",
+      "id": "2msf",
+      "products": [
+        "prod_OftoEBpTJPA8hw",
+        "prod_OftnKyETaX7azV",
+        "prod_OftnKXJ5eFoFAL"
+      ],
+      "url": "gift-shop",
+      "cover": "IMG_7287.JPG"
+    }
+  ],
+  "products": [
+    {
+      "name": "Hank",
+      "is_live": true,
+      "url": "hank",
+      "stripe_id": "prod_OftnjFi70QeBfn",
+      "created": 1694893327,
+      "photos": [{ "name": "IMG_7307.JPG", "width": 1000, "height": 1333 }],
+      "price": "$190.00"
+    },
+    {
+      "name": "Reba",
+      "is_live": true,
+      "url": "reba",
+      "stripe_id": "prod_OftnFgcoMIgiHv",
+      "created": 1694893265,
+      "photos": [{ "name": "IMG_7305.JPG", "width": 1000, "height": 1333 }],
+      "price": "$240.00"
+    },
+    {
+      "name": "Tanya",
+      "is_live": true,
+      "url": "tanya",
+      "stripe_id": "prod_OftnsYNYZYBTBl",
+      "created": 1694893229,
+      "photos": [{ "name": "IMG_7304.JPG", "width": 1000, "height": 1333 }],
+      "price": "$270.00"
+    },
+    {
+      "name": "keep honking sticker",
+      "is_live": true,
+      "url": "keep-honking-sticker",
+      "stripe_id": "prod_OftnKyETaX7azV",
+      "created": 1694891829,
+      "photos": [
+        {
+          "name": "ScreenShot2023-09-16at21607PM.png",
+          "width": 1594,
+          "height": 1614
+        }
+      ],
+      "price": "$0.10"
+    },
+    {
+      "name": "tumblebag",
+      "is_live": true,
+      "url": "tumblebag",
+      "description": "art supplies, makeup brushes, cool rocks from hikes... gosh, what can't you put in this bag??",
+      "stripe_id": "prod_OftnKXJ5eFoFAL",
+      "created": 1694874212,
+      "photos": [
+        { "name": "IMG_7299.jpg", "width": 1000, "height": 1334 },
+        { "name": "IMG_7300.jpg", "width": 1000, "height": 1333 }
+      ],
+      "price": "$34.00"
+    },
+    {
+      "name": "velvet tumblepillow",
+      "is_live": true,
+      "url": "velvet-tumblepillow",
+      "description": "a soft, velvet-y fabric displays a beautiful knockout tumbleweed",
+      "bulletPoints": ["18\"x18\" pillow"],
+      "stripe_id": "prod_OftoEBpTJPA8hw",
+      "created": 1694874112,
+      "photos": [
+        { "name": "IMG_7297.jpg", "width": 1000, "height": 1365 },
+        { "name": "IMG_7298.jpg", "width": 1000, "height": 1333 }
+      ],
+      "price": "$52.00"
+    },
+    {
+      "name": "woodblock prints",
+      "is_live": true,
+      "url": "woodblock-prints",
+      "description": "nature and the machine come together to create these unique prints, by Aaron Shoemaker",
+      "stripe_id": "prod_OftoCdeTclvOMU",
+      "created": 1694872801,
+      "photos": [
+        { "name": "woodblock_prints.jpg", "width": 1500, "height": 2000 }
+      ],
+      "price": "$72.00"
+    },
+    {
+      "name": "Cyanotic Sojourn",
+      "is_live": true,
+      "url": "cyanotic-sojourn",
+      "description": "The Cyanotic Sojourn is a conceptual artwork that captures the ephemeral essence of a tumbleweed rider's journey. The cyanotype print method imbues the fleeting natural tumbleweed with a sense of history, casting it in a haunting blue, reminiscent of the timeless expanse of sky it so often crossed. Bathed in sunlight during its creation, the print pays homage to the tumbleweed's sun-kissed journey through the desert.",
+      "stripe_id": "prod_OftogKN8Zq1BMz",
+      "created": 1694872671,
+      "photos": [{ "name": "evelyn_print.jpg", "width": 2000, "height": 2667 }],
+      "price": "$80.00",
+      "bulletPoints": [
+        "cypress masso, 2023",
+        "Cyanotype Paper, Sunlight, Tumbleweed"
+      ]
+    },
+    {
+      "name": "tetraweed",
+      "is_live": true,
+      "url": "tetraweed",
+      "stripe_id": "prod_OftoofjSGu6ABm",
+      "created": 1694872477,
+      "description": "\"TETRAWEED: In the Heart of Turbulence, A Golden Prospect\" is a provocative artwork featuring a bold, black wooden tetrahedron housing a gold-painted tumbleweed. In this piece, the humble tumbleweed casts away its desolate symbolism, instead, embodying splendor and potential. The golden tumbleweed nestled within the geometric form, underscores the transformation from survival to significance against odds. This intricate interplay between tetrahedron and tumbleweed explores existence's dualities - stability vs chaos, darkness vs light, rejection vs recognition. ",
+      "photos": [{ "name": "tetraweed.jpg", "width": 2028, "height": 2919 }],
+      "price": "$1,200.00",
+      "bulletPoints": [
+        "Mike Estee, 2023",
+        "Wood, Black Paint, Tumbleweed, Gold Paint"
+      ]
+    },
+    {
+      "name": "Garth",
+      "is_live": true,
+      "url": "garth",
+      "stripe_id": "prod_OftopDT8U0sRbp",
+      "created": 1694872136,
+      "photos": [{ "name": "IMG_7301.JPG", "width": 1000, "height": 1333 }],
+      "price": "$320.00"
+    },
+    {
+      "name": "Waylon",
+      "is_live": true,
+      "url": "waylon",
+      "description": "hand-picked from the Marfa roads",
+      "stripe_id": "prod_OftpC3CeZyVTco",
+      "created": 1691859263,
+      "photos": [{ "name": "IMG_7302.JPG", "width": 1000, "height": 1333 }],
+      "price": "$240.00"
+    },
+    {
+      "name": "Shania",
+      "is_live": true,
+      "url": "shania",
+      "description": "wildharvested from the fences of Marfa",
+      "stripe_id": "prod_OftpzwqLolwr5P",
+      "created": 1691857773,
+      "photos": [{ "name": "IMG_7303.JPG", "width": 1000, "height": 1436 }],
+      "price": "$220.00"
+    }
+  ],
+  "about_page": true
+}

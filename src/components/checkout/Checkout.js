@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { withStyles } from "@material-ui/core/styles";
 
 import PageWrapper from "../ui/PageWrapper";
-import { Paper, Grid } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 
 import CartSmall from "../cart/CartSmall";
 import CheckoutFlow from "./CheckoutFlow";
@@ -71,6 +71,7 @@ function Checkout(props) {
           />
         </Grid>
         <CheckoutFlow
+          api_key={config.api_key}
           classes={classes}
           slug={slug}
           items={items}

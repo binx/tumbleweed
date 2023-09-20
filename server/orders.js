@@ -73,38 +73,73 @@ function sendEmail(status, order) {
     .catch(console.error);
 }
 
-app.post("/order/create", function (req, res) {
-  stripe.orders.create(
-    {
-      currency: "usd",
-      items: req.body.items,
-      shipping: req.body.shipping,
-      metadata: req.body.metadata,
-      email: req.body.email,
+const calculateOrderAmount = (items) => {
+  return items.reduce((a, b) => a + b.price, 0) * 100;
+};
+
+app.post("/create-payment-intent", async (req, res) => {
+  const { items, email } = req.body;
+
+  // Create a PaymentIntent with the order amount and currency
+  const paymentIntent = await stripe.paymentIntents.create({
+    amount: calculateOrderAmount(items),
+    currency: "usd",
+    receipt_email: email,
+    metadata: {
+      items: JSON.stringify(
+        items.map((i) => ({
+          name: i.name,
+          price_id: i.price_id,
+          quantity: i.quantity,
+        }))
+      ),
     },
-    function (err, order) {
-      sendEmail("Ordered", order);
-      err ? res.status(500).send(err) : res.json(order);
-    }
-  );
+    // line_items: items.map((i) => ({ price: i.price_id, quantity: i.quantity })),
+    // mode: "payment",
+    // customer_email: "rachelbinx@gmail.com",
+    // metadata: shipping,
+    // success_url:
+    //   "https://marfatumbleweed.com/confirm?session_id={CHECKOUT_SESSION_ID}",
+  });
+
+  res.send({
+    client_secret: paymentIntent.client_secret,
+    amount: paymentIntent.amount,
+  });
 });
 
-app.post("/order/pay", function (req, res) {
-  stripe.orders.pay(
-    req.body.id,
-    {
-      source: req.body.source,
-    },
-    function (err, order) {
-      if (err) {
-        res.status(500).send(err);
-        return;
-      }
-      res.json(order);
-      sendEmail("Ordered", order);
-    }
-  );
-});
+// app.post("/order/create", function (req, res) {
+//   stripe.orders.create(
+//     {
+//       currency: "usd",
+//       items: req.body.items,
+//       shipping: req.body.shipping,
+//       metadata: req.body.metadata,
+//       email: req.body.email,
+//     },
+//     function (err, order) {
+//       sendEmail("Ordered", order);
+//       err ? res.status(500).send(err) : res.json(order);
+//     }
+//   );
+// });
+
+// app.post("/order/pay", function (req, res) {
+//   stripe.orders.pay(
+//     req.body.id,
+//     {
+//       source: req.body.source,
+//     },
+//     function (err, order) {
+//       if (err) {
+//         res.status(500).send(err);
+//         return;
+//       }
+//       res.json(order);
+//       sendEmail("Ordered", order);
+//     }
+//   );
+// });
 
 app.post("/order/update", function (req, res) {
   stripe.orders.update(
