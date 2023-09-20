@@ -23,16 +23,13 @@ const Wrapper = styled.div`
       font-size: 80px;
     }
   }
-  @media (max-width: 550px) {
+  @media (max-width: 600px) {
     h1 {
-      font-size: 60px;
+      display: none;
     }
   }
   @media (max-width: 400px) {
-    padding: 60px 20px;
-    h1 {
-      font-size: 40px;
-    }
+    padding: 40px 20px;
   }
 `;
 const Vibe = styled.div`
@@ -50,16 +47,13 @@ const Vibe = styled.div`
     position: absolute;
     background: white;
     top: 80px;
-  }
-  @media (max-width: 550px) {
-    p {
-      font-size: 12px;
-    }
+    white-space: balance;
   }
   @media (max-width: 400px) {
     height: 200px;
     p {
-      background-color: rgba(255, 255, 255, 0.85);
+      font-size: 12px;
+      background-color: rgba(255, 255, 255, 0.9);
     }
   }
 `;
@@ -71,7 +65,7 @@ const Tumble = styled.div`
   background-position: 50%;
   transform: rotate(-140deg);
   margin-top: -35px;
-  @media (max-width: 550px) {
+  @media (max-width: 500px) {
     margin-top: -24px;
     width: 250px;
     height: 250px;

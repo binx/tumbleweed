@@ -6,7 +6,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   padding: 80px;
-  @media (max-width: 500px) {
+  @media (max-width: 600px) {
     padding: 40px 20px;
   }
 `;

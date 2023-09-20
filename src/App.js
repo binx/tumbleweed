@@ -82,7 +82,7 @@ function App(props) {
               <Route
                 exact
                 path="/"
-                render={(props) => <Landing config={config} />}
+                render={() => <Landing config={config} />}
               />
               {config.about_page && (
                 <Route exact path="/about" component={AboutPage} />
@@ -90,12 +90,12 @@ function App(props) {
               <Route
                 exact
                 path="/shop"
-                render={(props) => <CollectionList config={config} />}
+                render={() => <CollectionList config={config} />}
               />
               <Route
                 exact
                 path="/collection/all-products"
-                render={(props) => (
+                render={() => (
                   <Collection
                     products={config.products}
                     title={"All Products"}
@@ -107,7 +107,7 @@ function App(props) {
                   exact
                   key={`route${i}`}
                   path={`/collection/${collection.url}`}
-                  render={(props) => {
+                  render={() => {
                     const products = getProductsFromCollection(
                       config,
                       collection.url
@@ -123,7 +123,7 @@ function App(props) {
                   exact
                   key={`route${i}`}
                   path={`/product/${product.url}`}
-                  render={(props) => (
+                  render={() => (
                     <Product
                       product={product}
                       config={config}
@@ -135,14 +135,14 @@ function App(props) {
               <Route
                 exact
                 path="/cart"
-                render={(props) => (
+                render={() => (
                   <Cart config={config} updateNumber={setQuantity} />
                 )}
               />
               <Route
                 exact
                 path="/checkout"
-                render={(props) => (
+                render={() => (
                   <Checkout config={config} updateNumber={setQuantity} />
                 )}
               />

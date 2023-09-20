@@ -26,7 +26,7 @@ const Marfa = styled.div`
   color: white;
   font-size: 110px;
   text-transform: uppercase;
-  border: 6px solid white;
+  border: 8px solid white;
   border-radius: 120px;
   padding: 10px 60px;
   font-family: Gotham;
@@ -37,11 +37,15 @@ const Marfa = styled.div`
     font-size: 70px;
     padding: 0px 40px;
     margin-bottom: 10px;
+    border: 6px solid white;
+  }
+  @media (max-width: 550px) {
+    font-size: 50px;
+    border: 4px solid white;
   }
   @media (max-width: 400px) {
     font-size: 40px;
     padding: 0px 25px;
-    margin-bottom: 10px;
     border: 3px solid white;
   }
 `;

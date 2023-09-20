@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
-import withWidth, { isWidthDown } from "@material-ui/core/withWidth";
+import withWidth, { isWidthDown, isWidthUp } from "@material-ui/core/withWidth";
 import styled from "styled-components";
 
 import { useSelector } from "react-redux";
@@ -35,7 +35,7 @@ const Wrapper = styled.div`
   @media (max-width: 600px) {
     padding: 20px;
     h3 {
-      margin: 0;
+      margin: 0 0 -4px 0;
     }
   }
   @media (max-width: 400px) {
@@ -85,7 +85,7 @@ function Banner({ quantity, config, width, location }) {
     );
   }
 
-  if (location.pathname === "/") return null;
+  if (location.pathname === "/" && isWidthUp("sm", width)) return null;
 
   return (
     <Wrapper>
