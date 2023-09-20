@@ -11,10 +11,13 @@ const Wrapper = styled.div`
   h2 {
     text-transform: uppercase;
     margin: 0 0 40px;
+    letter-spacing: 1px;
   }
   p {
     line-height: 1.5;
     margin: 0;
+    font-weight: 300px;
+    letter-spacing: 0.5px;
   }
   @media (max-width: 600px) {
     padding: 20px;
@@ -51,6 +54,10 @@ function AboutPage(props) {
         <h2>About</h2>
         <p>
           Marfa Tumbleweed is a pop-up tumbleweed gallery, located in Marfa, TX.
+        </p>
+        <p style={{ marginTop: "20px" }}>
+          For press inquiries or general questions, please contact us at{" "}
+          <b>gallery@marfatumbleweed.com</b>
         </p>
         <Grid>
           <div>
