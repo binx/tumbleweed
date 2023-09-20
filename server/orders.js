@@ -94,6 +94,9 @@ app.post("/create-payment-intent", async (req, res) => {
         }))
       ),
     },
+    automatic_payment_methods: {
+      enabled: true,
+    },
     // line_items: items.map((i) => ({ price: i.price_id, quantity: i.quantity })),
     // mode: "payment",
     // customer_email: "rachelbinx@gmail.com",
