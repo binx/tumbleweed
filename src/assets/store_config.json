@@ -132,9 +132,7 @@
       "description": "nature and the machine come together to create these unique prints, by Aaron Shoemaker",
       "stripe_id": "prod_OftoCdeTclvOMU",
       "created": 1694872801,
-      "photos": [
-        { "name": "woodblock_prints.jpg", "width": 1500, "height": 2000 }
-      ],
+      "photos": [{ "name": "print.jpg", "width": 800, "height": 1206 }],
       "price": "$72.00"
     },
     {
