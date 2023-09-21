@@ -28,7 +28,7 @@ const BG = styled.div`
 const Blend = styled.div`
   mix-blend-mode: lighten;
   position: absolute;
-  font-size: 100px;
+  font-size: 90px;
   top: 0;
   z-index: 1;
   color: white;
@@ -42,6 +42,7 @@ const Blend = styled.div`
   line-height: 1;
   text-align: center;
   text-wrap: balance;
+
   @media (max-width: 1400px) {
     font-size: 80px;
   }
@@ -70,7 +71,7 @@ const BigQuote = () => {
       <Blend>
         An art exhibition that explores the tension between the endemic
         environment and our commodified idea of the desert. We examine the
-        intricate forms and complex history of the iconic tumbleweeds of
+        intricate forms and complex history of the tumbleweeds found in
         Marfa,&nbsp;Texas.
       </Blend>
     </QuoteWrapper>
