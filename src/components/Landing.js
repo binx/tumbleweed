@@ -40,11 +40,7 @@ const GalleryWrapper = styled.div`
 `;
 
 const Landing = ({ config }) => {
-  const featuredProducts = getProductsFromCollection(
-    config,
-    "featured-products"
-  );
-
+  const exhibition = getProductsFromCollection(config, "exhibition");
   const giftShop = getProductsFromCollection(config, "gift-shop").slice(0, 3);
   const weeds = getProductsFromCollection(config, "tumbleweeds").slice(0, 3);
 
@@ -76,7 +72,7 @@ const Landing = ({ config }) => {
               view the exhibition <span style={{ fontSize: "24px" }}>↣</span>
             </Link>
           </StyledLink>
-          <ProductList products={featuredProducts} />
+          <ProductList products={exhibition} />
         </GalleryWrapper>
       </PageWrapper>
 
