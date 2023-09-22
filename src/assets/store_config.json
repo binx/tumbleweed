@@ -49,7 +49,8 @@
       "products": [
         "prod_OgW8XtPyXfgC9z",
         "prod_OftoEBpTJPA8hw",
-        "prod_OftnKyETaX7azV"
+        "prod_OftnKyETaX7azV",
+        "prod_OftnKXJ5eFoFAL"
       ],
       "url": "gift-shop",
       "cover": "IMG_7287.JPG"
@@ -120,7 +121,7 @@
         { "name": "IMG_7299.jpg", "width": 1000, "height": 1334 },
         { "name": "IMG_7300.jpg", "width": 1000, "height": 1333 }
       ],
-      "price": "$34.00"
+      "price": "$30.00"
     },
     {
       "name": "velvet tumblepillow",
@@ -134,7 +135,7 @@
         { "name": "IMG_7297.jpg", "width": 1000, "height": 1365 },
         { "name": "IMG_7298.jpg", "width": 1000, "height": 1333 }
       ],
-      "price": "$52.00"
+      "price": "$48.00"
     },
     {
       "name": "woodblock prints",
