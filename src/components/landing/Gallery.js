@@ -55,8 +55,8 @@ const Gallery = () => {
     <Grid>
       <GalleryPhoto />
       <Text>
-        <div>Open Thurs-Sun</div>
-        <div style={{ marginBottom: "60px" }}>10am - 4pm</div>
+        <div>Open Fri-Sun</div>
+        <div style={{ marginBottom: "60px" }}>10am - 3pm</div>
 
         <div>208 W El Paso St</div>
         <div>Suite 3</div>
