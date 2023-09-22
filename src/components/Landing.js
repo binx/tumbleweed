@@ -40,12 +40,12 @@ const GalleryWrapper = styled.div`
 `;
 
 const Landing = ({ config }) => {
+  const weeds = getProductsFromCollection(config, "tumbleweeds").slice(0, 3);
   const exhibition = getProductsFromCollection(config, "exhibition").slice(
     0,
-    3
+    6
   );
   const giftShop = getProductsFromCollection(config, "gift-shop").slice(0, 6);
-  const weeds = getProductsFromCollection(config, "tumbleweeds").slice(0, 3);
 
   return (
     <>

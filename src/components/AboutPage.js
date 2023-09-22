@@ -91,11 +91,11 @@ function AboutPage(props) {
           <div>
             <h3>{`Special Thanks <3`}</h3>
             <ul>
-              <li>Jeff Wilson</li>
-              <li>Chris Delbuck</li>
               <li>Heather Stewart</li>
+              <li>Chris Delbuck</li>
               <li>Carolina Gallegos</li>
               <li>Leland Dyer</li>
+              <li>Jeff Wilson</li>
             </ul>
           </div>
         </Grid>
