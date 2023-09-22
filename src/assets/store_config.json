@@ -36,6 +36,7 @@
       "name": "Exhibition",
       "id": "6rdy",
       "products": [
+        "prod_OgX7KzL4wSiAvP",
         "prod_OftoofjSGu6ABm",
         "prod_OftogKN8Zq1BMz",
         "prod_OftoCdeTclvOMU"
@@ -50,8 +51,9 @@
         "prod_OgW8XtPyXfgC9z",
         "prod_OftoEBpTJPA8hw",
         "prod_OftnKyETaX7azV",
-        "prod_OgWx247WTt7RNL",
         "prod_OftnKXJ5eFoFAL",
+        "prod_OgWx247WTt7RNL",
+        "prod_OgXFv53Lv37Fsq",
         "prod_OgWyTuWfjB7xsP"
       ],
       "url": "gift-shop",
@@ -59,6 +61,27 @@
     }
   ],
   "products": [
+    {
+      "name": "Budget Tumbleweed",
+      "is_live": true,
+      "url": "budget-tumbleweed",
+      "description": "\"it's ok if you can't afford the real art\"",
+      "bulletPoints": ["assembly required"],
+      "stripe_id": "prod_OgXFv53Lv37Fsq",
+      "created": 1695392250,
+      "photos": [{ "name": "IMG_7385.jpg", "width": 800, "height": 1067 }],
+      "price": "$30.00"
+    },
+    {
+      "name": "Tumbleweed // Judd",
+      "is_live": true,
+      "url": "tumbleweed--judd-print",
+      "bulletPoints": ["8\"x8\" matte print", "mounted on foam board"],
+      "stripe_id": "prod_OgX7KzL4wSiAvP",
+      "created": 1695391816,
+      "photos": [{ "name": "IMG_7381.jpg", "width": 800, "height": 1067 }],
+      "price": "$28.00"
+    },
     {
       "name": "Logo Sticker",
       "is_live": true,
@@ -73,7 +96,6 @@
       "name": "Gallery Sticker",
       "is_live": true,
       "url": "gallery-sticker",
-      "bulletPoints": ["3\"x2\" matte sticker"],
       "stripe_id": "prod_OgWx247WTt7RNL",
       "created": 1695391212,
       "photos": [{ "name": "IMG_7379.JPG", "width": 800, "height": 1067 }],
