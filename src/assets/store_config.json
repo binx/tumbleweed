@@ -50,13 +50,35 @@
         "prod_OgW8XtPyXfgC9z",
         "prod_OftoEBpTJPA8hw",
         "prod_OftnKyETaX7azV",
-        "prod_OftnKXJ5eFoFAL"
+        "prod_OgWx247WTt7RNL",
+        "prod_OftnKXJ5eFoFAL",
+        "prod_OgWyTuWfjB7xsP"
       ],
       "url": "gift-shop",
       "cover": "IMG_7287.JPG"
     }
   ],
   "products": [
+    {
+      "name": "Logo Sticker",
+      "is_live": true,
+      "url": "logo-sticker",
+      "bulletPoints": ["3\"x3\" matte sticker"],
+      "stripe_id": "prod_OgWyTuWfjB7xsP",
+      "created": 1695391260,
+      "photos": [{ "name": "IMG_7380.JPG", "width": 800, "height": 1067 }],
+      "price": "$4.00"
+    },
+    {
+      "name": "Gallery Sticker",
+      "is_live": true,
+      "url": "gallery-sticker",
+      "bulletPoints": ["3\"x2\" matte sticker"],
+      "stripe_id": "prod_OgWx247WTt7RNL",
+      "created": 1695391212,
+      "photos": [{ "name": "IMG_7379.JPG", "width": 800, "height": 1067 }],
+      "price": "$4.00"
+    },
     {
       "name": "Sprig Pendant",
       "is_live": true,
@@ -101,13 +123,7 @@
       "url": "keep-honking-sticker",
       "stripe_id": "prod_OftnKyETaX7azV",
       "created": 1694891829,
-      "photos": [
-        {
-          "name": "ScreenShot2023-09-16at21607PM.png",
-          "width": 1594,
-          "height": 1614
-        }
-      ],
+      "photos": [{ "name": "IMG_7383.jpg", "width": 800, "height": 1067 }],
       "price": "$7.00"
     },
     {
@@ -135,7 +151,7 @@
         { "name": "IMG_7297.jpg", "width": 1000, "height": 1365 },
         { "name": "IMG_7298.jpg", "width": 1000, "height": 1333 }
       ],
-      "price": "$48.00"
+      "price": "$52.00"
     },
     {
       "name": "woodblock prints",
