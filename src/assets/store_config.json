@@ -47,15 +47,26 @@
       "name": "Gift Shop",
       "id": "2msf",
       "products": [
+        "prod_OgW8XtPyXfgC9z",
         "prod_OftoEBpTJPA8hw",
-        "prod_OftnKyETaX7azV",
-        "prod_OftnKXJ5eFoFAL"
+        "prod_OftnKyETaX7azV"
       ],
       "url": "gift-shop",
       "cover": "IMG_7287.JPG"
     }
   ],
   "products": [
+    {
+      "name": "Sprig Pendant",
+      "is_live": true,
+      "url": "sprig-pendant",
+      "description": "Keep a tiny sprig of tumbleweed close to your heart forever <3",
+      "bulletPoints": ["18\" chain with a lobster clasp"],
+      "stripe_id": "prod_OgW8XtPyXfgC9z",
+      "photos": [{ "name": "IMG_7374.jpg", "width": 800, "height": 1067 }],
+      "created": 1695388113,
+      "price": "$48.00"
+    },
     {
       "name": "Hank",
       "is_live": true,
@@ -143,7 +154,7 @@
       "stripe_id": "prod_OftogKN8Zq1BMz",
       "created": 1694872671,
       "photos": [{ "name": "evelyn_print.jpg", "width": 2000, "height": 2667 }],
-      "price": "$80.00",
+      "price": "$72.00",
       "bulletPoints": [
         "cypress masso, 2023",
         "Cyanotype Paper, Sunlight, Tumbleweed"
