@@ -139,7 +139,7 @@
       "stripe_id": "prod_OgXFv53Lv37Fsq",
       "created": 1695392250,
       "photos": [{ "name": "IMG_7385.jpg", "width": 800, "height": 1067 }],
-      "price": "$30.00"
+      "price": "$18.00"
     },
     {
       "name": "Tumbleweed // Judd",
@@ -149,7 +149,7 @@
       "stripe_id": "prod_OgX7KzL4wSiAvP",
       "created": 1695391816,
       "photos": [{ "name": "IMG_7381.jpg", "width": 800, "height": 1067 }],
-      "price": "$28.00"
+      "price": "$36.00"
     },
     {
       "name": "Logo Sticker",
@@ -179,7 +179,7 @@
       "stripe_id": "prod_OgW8XtPyXfgC9z",
       "photos": [{ "name": "IMG_7374.JPG", "width": 800, "height": 1067 }],
       "created": 1695388113,
-      "price": "$48.00"
+      "price": "$28.00"
     },
     {
       "name": "Hank",
@@ -242,7 +242,7 @@
         { "name": "IMG_7297.jpg", "width": 1000, "height": 1365 },
         { "name": "IMG_7298.jpg", "width": 1000, "height": 1333 }
       ],
-      "price": "$52.00"
+      "price": "$38.00"
     },
     {
       "name": "woodblock prints",
@@ -262,7 +262,7 @@
       "stripe_id": "prod_OftogKN8Zq1BMz",
       "created": 1694872671,
       "photos": [{ "name": "evelyn_print.jpg", "width": 2000, "height": 2667 }],
-      "price": "$72.00",
+      "price": "$38.00",
       "bulletPoints": [
         "cypress masso, 2023",
         "Cyanotype Paper, Sunlight, Tumbleweed"
