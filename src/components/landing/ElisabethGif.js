@@ -11,7 +11,7 @@ const BG = styled.div`
   display: flex;
   justify-content: center;
 
-  @media (max-width: 400px) {
+  @media (max-width: 500px) {
     padding: 20px;
   }
 `;
@@ -38,10 +38,12 @@ const Credit = styled.div`
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: center;
-  padding: 6px;
+  padding: 8px;
   border-bottom: 1px solid;
   max-width: 1100px;
   margin: 0 auto 120px;
+  font-weight: 300;
+
   a {
     color: black;
   }
