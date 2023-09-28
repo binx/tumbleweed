@@ -9,6 +9,7 @@ import Gallery from "./landing/Gallery";
 import PageWrapper from "./ui/PageWrapper";
 import ProductList from "./product/ProductList";
 // import Soil from "./landing/Soil";
+import ElisabethGif from "./landing/ElisabethGif";
 import LandingLinks from "./landing/LandingLinks";
 import { Landscape, Tumbleweeds } from "./landing/Landscape";
 import Footer from "./ui/Footer";
@@ -66,7 +67,7 @@ const Landing = ({ config }) => {
         </GalleryWrapper>
       </PageWrapper>
 
-      <Landscape />
+      <ElisabethGif />
 
       <PageWrapper>
         <GalleryWrapper>
@@ -79,7 +80,7 @@ const Landing = ({ config }) => {
         </GalleryWrapper>
       </PageWrapper>
 
-      <Tumbleweeds />
+      <Landscape />
 
       <PageWrapper>
         <GalleryWrapper>
@@ -91,6 +92,8 @@ const Landing = ({ config }) => {
           <ProductList products={giftShop} />
         </GalleryWrapper>
       </PageWrapper>
+
+      <Tumbleweeds />
 
       <div style={{ margin: "-60px 0 20px" }}>
         <LandingLinks />
